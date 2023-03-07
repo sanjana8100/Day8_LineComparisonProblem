@@ -13,6 +13,7 @@ public class LineComparison {
         int y2= in.nextInt();
         double length= Math.sqrt((x2-x1)^2 + (y2-y1)^2);
         System.out.println("The length of Line "+LineNo+" is: "+length);
+        System.out.println("_____________________________________________________________");
         return length;
     }
     public static void main(String[] args) {
@@ -21,9 +22,12 @@ public class LineComparison {
         LineComparison line= new LineComparison();
         double length1= line.LineInput(1);
         double length2= line.LineInput(2);
+        System.out.println("********************************************************************");
         if(length1 == length2)
-            System.out.println("Both Lines are EQUAL");
+            System.out.println("Lengths of Line 1 and Line 2 are EQUAL.");
+        else if(length1 > length2)
+            System.out.println("Length of Line 1 is GREATER THAN Length of Line 2.");
         else
-            System.out.println("Both Lines are NOT Equal");
+            System.out.println("Length of Line 1 is LESSER THAN Length of Line 2.");
     }
 }
